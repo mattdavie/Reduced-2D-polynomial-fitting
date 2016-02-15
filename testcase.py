@@ -1,4 +1,4 @@
-import mumpy as np
+import numpy as np
 
 numdata=180
 x=.5-np.random.random(numdata)*1.
