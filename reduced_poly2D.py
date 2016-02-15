@@ -9,8 +9,8 @@ def reducedpolyfit2D(x,y,z,ord=5,crosslim=2):
 	ncols=(ord+1)**2
 	G=np.zeros((x.size,ncols))
 	ij=itertools.product(range(ord+1),range(ord+1))
-	for k,(i,j) in enumerate(ij):
-		G[:,k]=x**i * y**j * (i<crosslim or j<crosslim)
+	for ind,(i,j) in enumerate(ij):
+		G[:,ind]=x**i * y**j * (i<crosslim or j<crosslim)
 	m,_,_,_=np.linalg.lstsq(G,z)
 	return m
 	
@@ -20,7 +20,7 @@ def reducedpolyval2D(x,y,m,crosslim=2):
 	ord=int(np.sqrt(len(m)))-1
 	ij=itertools.product(range(ord+1),range(ord+1))
 	z=np.zeros_like(x)
-	for a,(i,j) in zip (m, ij):
-		#print i,j,a #uncomment for testing/display purposes
-		z+=a* x**i * y**j * (i<crosslim or j<crosslim)
+	for coeff,(i,j) in zip (m, ij):
+		#print i,j,coeff #uncomment for testing/display purposes
+		z+=coeff* x**i * y**j * (i<crosslim or j<crosslim)
 	return z
