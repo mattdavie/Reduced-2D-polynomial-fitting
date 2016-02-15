@@ -14,8 +14,8 @@ def reducedpolyfit2D(x,y,z,ord=6,crosslim=2):
 	return m
 	
 def reducedpolyval2D(x,y,m,crosslim=2):
-  #will return the value of your fitted polynomial whose coefficients are m
-  #at coordinates (x,y) again limiting crossterms as before
+	#will return the value of your fitted polynomial whose coefficients are m
+	#at coordinates (x,y) again limiting crossterms as before
 	ord=int(np.sqrt(len(m)))-1
 	ij=itertools.product(range(ord+1),range(ord+1))
 	z=np.zeros_like(x)
