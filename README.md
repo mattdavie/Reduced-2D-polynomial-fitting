@@ -9,8 +9,8 @@ The following is roughly what it would be like if
 ord was set to 1 and crosslim was set to 2
 One term would be omitted - that of x^2y^2.
 
-y^2 xy^2  0
+y^2   xy^2   0
 
-y   xy    x^2y
+y     xy     x^2y
 
-1   x     x^2
+1     x      x^2
