@@ -21,6 +21,6 @@ def reducedpolyval2D(x,y,m,crosslim=2):
 	ij=itertools.product(range(ord+1),range(ord+1))
 	z=np.zeros_like(x)
 	for a,(i,j) in zip (m, ij):
-		print i,j,a
+		#print i,j,a #uncomment for testing/display purposes
 		z+=a* x**i * y**j * (i<crosslim or j<crosslim)
 	return z
