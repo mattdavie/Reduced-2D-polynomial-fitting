@@ -6,8 +6,9 @@ For example: fitting up to x^5 . y^5 would include 36 coefficients, if you were 
 
 
 The following is roughly what it would be like if
-ord was set to 1 and crosslim was set to 2
-One term would be omitted - that of x^2y^2.
+ord was set to 1 and crosslim was set to 2.
+
+One term would be omitted - that of x^2y^2 which is now set to zero.
 
 |y^2   |xy^2   |0   |
 |----|----|----|
