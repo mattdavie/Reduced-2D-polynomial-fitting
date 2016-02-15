@@ -5,7 +5,7 @@ import itertools
 def reducedpolyfit2D(x,y,z,ord=6,crosslim=2):
 	#ord will fit up to x**(ord-1) * y**(ord-1)
 	#to your x,y,z dataset (yes they all should be the same length)
-	#and cull cross terms where both powers > crosslim
+	#and cull cross terms where both powers >= crosslim
 	ncols=(ord+1)**2
 	G=np.zeros((x.size,ncols))
 	ij=itertools.product(range(ord+1),range(ord+1))
